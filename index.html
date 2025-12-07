@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo"><img class="invert" src="asset/logo.svg" alt="logo"></div>
+                <ul>
+                    <li><img class="invert" src="asset/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="asset/search.svg" alt="home">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="asset/library.svg" alt="library">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <img class="invert" src="asset/left-shift.svg" alt="left-shift">
+                    <img class="invert" src="asset/right-shift.svg" alt="right-shift">
+                </div>
+                <div class="button">
+                    <button class="btn-sign" >Signup</button>
+                    <button class="btn-login" >Log in</button>
+                </div>
+            </div>
+
+            <div class="spotifyPlaylist">
+                <h1>Spotify Playlist</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="play">
+                            <img src="asset/play-button.png" alt="play-button">
+                        </div>
+                        <img src="asset/images/the-weeknd.jpeg" alt="The-Weeknd">
+                        <h2>Save the tears</h2>
+                        <p>The weeknd</p>
+                    </div>
+                </div>
+                <div class="playbar">
+                    playbar
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
