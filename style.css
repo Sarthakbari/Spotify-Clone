@@ -79,7 +79,7 @@ body {
     background-color: rgb(35, 35, 35);
 }
 
-.header > * {
+.header>* {
     padding: 20px;
 }
 
@@ -87,7 +87,7 @@ body {
     margin: 0 12px;
 }
 
-.btn-sign{
+.btn-sign {
     background-color: #252525;
     color: #ada7a7;
     font-weight: 600;
@@ -96,13 +96,13 @@ body {
     cursor: pointer;
 }
 
-.btn-sign:hover{
+.btn-sign:hover {
     font-size: 16px;
     color: white;
 }
 
 
-.btn-login{
+.btn-login {
     background-color: white;
     color: black;
     border-radius: 21px;
@@ -111,7 +111,7 @@ body {
     cursor: pointer;
 }
 
-.btn-login:hover{
+.btn-login:hover {
     font-weight: 700;
     font-size: 17px;
 }
@@ -125,9 +125,14 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     margin: 30px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-height: 70vh;
 }
+
+.songList ul {
+    padding: 0 12px;
+}
+
 
 .spotifyPlaylist .card {
     width: 200px;
@@ -148,23 +153,120 @@ body {
     object-fit: contain;
 }
 
+/* FIXED: Proper Spotify-style play button position */
+.card {
+    position: relative;
+    /* REQUIRED for correct positioning */
+}
+
 .card .play {
     position: absolute;
-    top: 48%;
-    left: 41%;
-    z-index: 100;
-    transform: translate(-50%, -50%);
+    bottom: 99px;
+    /* NEW: sits bottom-right like Spotify */
+    right: 12px;
+    /* NEW */
     opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 60px;
+    /* hidden until hover */
+    z-index: 10;
+    transform: translateY(8px);
+    /* NEW: slide-up animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* SHOW PLAY BUTTON ON HOVER */
 .card:hover .play {
     opacity: 1;
+    transform: translateY(0);
+    /* smooth rise effect */
 }
 
-.playbar{
+/* Optional: adjust play icon size */
+.card .play img {
+    width: 50px;
+    /* looks cleaner */
+}
+
+
+.playbar {
     position: absolute;
-    background-color: green;
     bottom: 0;
+    width: 90%;
+    padding: 12px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 16px;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.songbuttons img {
+    cursor: pointer;
+}
+
+.songList .info {
+    font-size: 13px;
+    width: 344px;
+}
+
+.info div {
+    word-break: break-all;
+}
+
+.songList ul li {
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid rgba(146, 143, 143, 0.491);
+    margin: 12px 0;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span {
+    font-size: 15px;
+    width: 64px;
+    padding: 12px;
+}
+
+.seekbar {
+    height: 4px;
+    width: 98%;
+    background: black;
+    border-radius: 10px;
+    position: relative;
+    bottom: 8px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+
+.aboveBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
 }
